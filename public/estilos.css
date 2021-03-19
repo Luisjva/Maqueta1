@@ -1,0 +1,89 @@
+* {
+  font-family: "Oxygen", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+header {
+  background-image: linear-gradient(to bottom, #8f94fb69 70%, #8f94fb),
+    url(header.jpg);
+  background-size: cover;
+  height: 250px;
+  width: 100%;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 30px auto;
+  grid-template-areas:
+    "titulo  nav"
+    "eslogan img";
+}
+
+.diseño {
+  margin-block-end: 0;
+  padding-left: 1rem;
+}
+
+.header__titulo {
+  grid-area: eslogan;
+  padding-left: 1rem;
+  margin: auto;
+}
+
+.header__img {
+  width: 80%;
+  grid-area: img;
+  margin: auto;
+}
+
+.header-2 {
+  background: linear-gradient(to top, #4e54c8 40%, #8f94fb);
+  position: relative;
+  height: 350px;
+}
+
+.header-2__derecho {
+  padding-top: 75px;
+  width: 75%;
+  padding-left: 15px;
+}
+
+.header-2__titulo,
+.header-2__texto {
+  position: relative;
+  color: #fff;
+  z-index: 100;
+}
+
+.header-2__img {
+  position: absolute;
+  top: 0px;
+  width: 60%;
+  right: 16px;
+  z-index: 1;
+}
+.ola {
+  position: absolute;
+  bottom: 0;
+}
+
+h2 {
+  display: block;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+@media screen and (min-width: 336px) {
+  .header-2 {
+    height: 320px;
+  }
+  .header-2__derecho {
+    padding-top: 100px;
+  }
+}
