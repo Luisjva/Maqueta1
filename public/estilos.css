@@ -2,6 +2,10 @@
   font-family: "Oxygen", sans-serif;
 }
 
+body {
+  background-color: #eee;
+}
+
 h1,
 h2,
 h3,
@@ -43,7 +47,7 @@ header {
 }
 
 .header-2 {
-  background: linear-gradient(to top, #4e54c8 40%, #8f94fb);
+  background: linear-gradient(#8f94fb 40%, #4e54c8 99%, #eee);
   position: relative;
   height: 350px;
 }
@@ -67,6 +71,7 @@ header {
   width: 60%;
   right: 16px;
   z-index: 1;
+  opacity: 0.7;
 }
 .ola {
   position: absolute;
@@ -77,6 +82,153 @@ h2 {
   display: block;
   margin-block-start: 0;
   margin-block-end: 0;
+}
+
+/*    Clientes    */
+.clientes__derecho {
+  margin: 1rem;
+}
+
+/*    Comentario    */
+.comentario {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas:
+    "text text"
+    "foto nombre";
+  width: 80%;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px #555;
+  margin: auto;
+}
+
+.comentario__img {
+  background: url(persona.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-bottom: 5px;
+  margin-left: 12px;
+}
+
+.comentario__nombre {
+  text-decoration: none;
+  margin-top: 18px;
+  margin-left: 7px;
+}
+
+.comentario__text {
+  grid-area: text;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+/*    Planes    */
+.planes__titulo {
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.plan {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas:
+    "nombre"
+    "precio"
+    "tiempo"
+    "btn";
+  background: linear-gradient(to top, #4e54c8 40%, #8f94fb);
+  width: 170px;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+.plan__nombre {
+  grid-area: nombre;
+  text-align: center;
+}
+
+.plan__precio {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  position: relative;
+}
+
+.plan__precio-momeda {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 1.7rem;
+  color: #9094dd;
+  position: absolute;
+  opacity: 0.7;
+  top: 10%;
+  left: 30%;
+}
+
+.plan__precio-momeda-2 {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 1.7rem;
+  color: #9094dd;
+  position: absolute;
+  opacity: 0.7;
+  top: 10%;
+  left: 25%;
+}
+
+.plan__precio-decimales {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 0.8rem;
+  position: absolute;
+  top: 45%;
+  color: #000a;
+}
+
+.plan__cantidad {
+  text-align: center;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-size: 0.7rem;
+  color: #9094dd;
+}
+
+.plan__btn {
+  background-color: #9094dd;
+  border: none;
+  outline: none;
+  width: 70%;
+  border-radius: 3px;
+  margin: auto;
+  margin-bottom: 0.7rem;
+  padding: 0.3rem;
+  margin-top: 1rem;
+}
+
+.incluye {
+  width: 170px;
+  margin: auto;
+}
+
+.incluye h4 {
+  margin-block-end: 0.7em;
+}
+
+.lista-de-incluidos {
+  list-style-type: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+}
+
+.lista-de-incluidos li {
+  margin-bottom: 0.3rem;
 }
 
 @media screen and (min-width: 336px) {
