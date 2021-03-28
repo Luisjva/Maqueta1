@@ -4,6 +4,7 @@
 
 body {
   background-color: #eee;
+  width: 100%;
 }
 
 h1,
@@ -14,12 +15,11 @@ h5 {
   font-family: "Merriweather Sans", sans-serif;
 }
 
-header {
+.header {
   background-image: linear-gradient(to bottom, #8f94fb69 70%, #8f94fb),
     url(header.jpg);
   background-size: cover;
-  height: 250px;
-  width: 100%;
+  height: 300px;
   color: #fff;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -50,6 +50,7 @@ header {
   background: linear-gradient(#8f94fb 40%, #4e54c8 99%, #eee);
   position: relative;
   height: 350px;
+  z-index: 0;
 }
 
 .header-2__derecho {
@@ -73,6 +74,7 @@ header {
   z-index: 1;
   opacity: 0.7;
 }
+
 .ola {
   position: absolute;
   bottom: 0;
@@ -85,157 +87,238 @@ h2 {
 }
 
 /*    Clientes    */
+.clientes {
+  position: relative;
+  z-index: 100;
+}
+
+.clientes h2 {
+  padding-left: 1rem;
+}
+
 .clientes__derecho {
   margin: 1rem;
 }
 
-/*    Comentario    */
-.comentario {
+/*    Testiminios    */
+.testimonio {
   display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: repeat(2, auto);
-  grid-template-areas:
-    "text text"
-    "foto nombre";
-  width: 80%;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0px 0px 5px #555;
-  margin: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "izq der";
+  width: 90%;
+  margin: 2rem auto;
 }
 
-.comentario__img {
-  background: url(persona.jpg);
-  background-size: cover;
-  background-position: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin-bottom: 5px;
-  margin-left: 12px;
+.testimonio2 {
+  display: none;
 }
 
-.comentario__nombre {
-  text-decoration: none;
-  margin-top: 18px;
-  margin-left: 7px;
-}
-
-.comentario__text {
-  grid-area: text;
-  margin-left: 12px;
-  margin-right: 12px;
-}
-
-/*    Planes    */
-.planes__titulo {
-  margin-left: 1rem;
-  margin-top: 1rem;
-}
-
-.plan {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, auto);
-  grid-template-areas:
-    "nombre"
-    "precio"
-    "tiempo"
-    "btn";
-  background: linear-gradient(to top, #4e54c8 40%, #8f94fb);
-  width: 170px;
-  border-radius: 10px;
-  margin: auto;
-  margin-top: 1rem;
-}
-
-.plan__nombre {
-  grid-area: nombre;
-  text-align: center;
-}
-
-.plan__precio {
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 3rem;
-  text-align: center;
-  margin-block-start: 0;
-  margin-block-end: 0;
+.testimonio-izquierdo {
+  grid-area: izq;
   position: relative;
+  margin: auto;
 }
 
-.plan__precio-momeda {
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 1.7rem;
-  color: #9094dd;
+.testimonio-izquierdo img {
+  width: 80%;
+  margin: 20% auto;
+  position: relative;
+  z-index: 100;
+}
+
+.testimonio-izquierdo--fondo {
   position: absolute;
-  opacity: 0.7;
-  top: 10%;
-  left: 30%;
-}
-
-.plan__precio-momeda-2 {
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 1.7rem;
-  color: #9094dd;
-  position: absolute;
-  opacity: 0.7;
-  top: 10%;
-  left: 25%;
-}
-
-.plan__precio-decimales {
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
-  position: absolute;
-  top: 45%;
-  color: #000a;
-}
-
-.plan__cantidad {
-  text-align: center;
-  margin-block-start: 0;
-  margin-block-end: 0;
-  font-size: 0.7rem;
-  color: #9094dd;
-}
-
-.plan__btn {
-  background-color: #9094dd;
-  border: none;
-  outline: none;
+  height: 100%;
   width: 70%;
-  border-radius: 3px;
-  margin: auto;
-  margin-bottom: 0.7rem;
-  padding: 0.3rem;
-  margin-top: 1rem;
+  background: linear-gradient(#8f94fbb9 40%, #4e54c8b9);
+  top: 0;
+  right: 0;
+  z-index: 1;
 }
 
-.incluye {
-  width: 170px;
-  margin: auto;
-}
-
-.incluye h4 {
-  margin-block-end: 0.7em;
-}
-
-.lista-de-incluidos {
-  list-style-type: none;
+.testimonio-izquierdo p {
+  position: absolute;
+  bottom: 0;
+  right: 0;
   margin-block-start: 0;
-  margin-block-end: 0;
-  padding-inline-start: 0;
+  margin-block-end: 0.3rem;
+  font-weight: 500;
+  margin-right: 0.5rem;
+  color: #fff;
+  z-index: 20;
 }
 
-.lista-de-incluidos li {
-  margin-bottom: 0.3rem;
+.testimonio-derecho {
+  grid-area: der;
+  padding-left: 1rem;
+  margin: auto;
 }
 
 @media screen and (min-width: 336px) {
+  .header {
+    height: 250px;
+  }
+
   .header-2 {
     height: 320px;
   }
   .header-2__derecho {
     padding-top: 100px;
+  }
+}
+
+@media screen and (min-width: 411px) {
+  .testimonio-izquierdo img {
+    width: 70%;
+    margin: 15% auto;
+    position: relative;
+    z-index: 100;
+    margin-left: 15px;
+  }
+
+  .testimonio-izquierdo--fondo {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .header-2__img {
+    width: 45%;
+  }
+
+  .header-2 {
+    padding-left: 5%;
+    padding-right: 5%;
+    height: 350px;
+  }
+
+  .header {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .clientes {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .testimonio-izquierdo img {
+    width: 70%;
+    margin: 15% auto;
+    margin-left: 30px;
+  }
+
+  .testimonio-izquierdo--fondo {
+    width: 60%;
+    right: 0.5rem;
+  }
+
+  .testimonio-izquierdo p {
+    right: 0.5rem;
+  }
+
+  .planes__titulo {
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
+  .ola {
+    left: -0.5%;
+    width: 101%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .header-2 {
+    height: 420px;
+  }
+  .header-2__derecho {
+    padding-top: 150px;
+    width: 75%;
+    padding-left: 15px;
+  }
+
+  .testimonio-izquierdo img {
+    width: 60%;
+    margin: 10% auto;
+    margin-left: 30px;
+  }
+
+  .testimonio-izquierdo--fondo {
+    width: 50%;
+    right: 1rem;
+  }
+
+  .testimonio-izquierdo p {
+    right: 1rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .header-2 {
+    height: 450px;
+  }
+
+  .header {
+    height: 320px;
+  }
+
+  .header__img {
+    width: 70%;
+  }
+
+  .clientes {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+      "titulo titulo"
+      "testimonio1 testimonio2";
+  }
+
+  .clientes h2 {
+    padding-left: 1rem;
+    grid-area: titulo;
+  }
+
+  .testimonio-izquierdo img {
+    width: 60%;
+    margin: 15% auto;
+    margin-left: 30px;
+  }
+
+  .testimonio {
+    width: 95%;
+  }
+
+  .testimonio2 {
+    display: grid;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .header-2__img {
+    width: 40%;
+  }
+
+  .ola {
+    bottom: -25px;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  body {
+    width: 1100px;
+    margin: auto;
+  }
+
+  .header__img {
+    width: 50%;
+    grid-area: img;
+    margin: auto;
   }
 }
