@@ -155,6 +155,99 @@ h2 {
   margin: auto;
 }
 
+/*    Planes    */
+.planes {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    "titulo"
+    "basico"
+    "pro";
+}
+
+.planes h2 {
+  padding-left: 1rem;
+}
+
+.plan__basico {
+  grid-area: basico;
+}
+
+.plan__pro {
+  grid-area: pro;
+}
+
+.plan {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(#4e54c8, #8f94fb);
+  text-align: center;
+  margin: 1.5rem auto;
+  padding: 1rem;
+  width: 80%;
+  border-radius: 10px;
+  color: #fff;
+  max-width: 200px;
+}
+
+.plan img {
+  width: 90%;
+  margin: auto;
+}
+
+.plan__precio {
+  font-family: "Merriweather Sans", sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  position: relative;
+  margin: auto;
+}
+
+.plan__precio__moneda {
+  font-size: 0.9rem;
+  position: absolute;
+  left: -10px;
+}
+
+.plan__precio__centavos {
+  position: absolute;
+  font-size: 0.9rem;
+  bottom: 5px;
+  right: -18px;
+}
+
+.plan__tiempo {
+  margin-block-start: 0;
+  margin-block-end: 1.2rem;
+  font-size: 0.8rem;
+  color: #fffa;
+}
+
+.plan ul {
+  list-style-type: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+  margin-bottom: 1rem;
+}
+
+.plan button {
+  background: none;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 0.2rem;
+  width: 80%;
+  margin: auto;
+}
+
+.plan button:hover {
+  background-color: #fff;
+  color: #8f94fb;
+}
+
 @media screen and (min-width: 336px) {
   .header {
     height: 250px;
@@ -218,16 +311,19 @@ h2 {
     right: 0.5rem;
   }
 
-  .planes__titulo {
-    padding-left: 5%;
-    padding-right: 5%;
-    margin-left: 0;
-    margin-top: 1rem;
-  }
-
   .ola {
     left: -0.5%;
     width: 101%;
+  }
+
+  .planes {
+    padding-left: 5%;
+    padding-right: 5%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "titulo titulo"
+      "basico pro";
   }
 }
 
